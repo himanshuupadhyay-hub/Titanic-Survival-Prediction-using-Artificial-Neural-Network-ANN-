@@ -25,18 +25,15 @@ model = load_model(
 
 import pickle
 
-with open(r'C:\Users\himan\.ipython\Gen-AI Tasks(Himanshu)\Deep_Learning\ANN Model\label_encoder.pkl', 'rb') as file:
+with open('label_encoder.pkl', 'rb') as file:
     label_encoder = pickle.load(file)
 
-import pickle
 
-with open(r'C:\Users\himan\.ipython\Gen-AI Tasks(Himanshu)\Deep_Learning\ANN Model\onehot_encoder.pkl', 'rb') as file:
+with open('onehot_encoder.pkl', 'rb') as file:
     onehot_encoder = pickle.load(file)
-import pickle
 
-with open(r'C:\Users\himan\.ipython\Gen-AI Tasks(Himanshu)\Deep_Learning\ANN Model\scaler_encoder.pkl', 'rb') as file:
-    scaler_encoder = pickle.load(file)       
-
+with open('scaler_encoder.pkl', 'rb') as file:
+    scaler_encoder = pickle.load(file)
 
 data['Sex']=label_encoder.transform(data['Sex'])
 
